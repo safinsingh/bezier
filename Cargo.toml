@@ -1,0 +1,18 @@
+[package]
+name = "bezier"
+version = "0.1.0"
+authors = ["Safin Singh <safin.singh@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+anyhow = "1"
+cairo-rs = { git = "https://github.com/gtk-rs/gtk-rs", rev = "1fd9791", features = ["png"] }
+indicatif = "0.15"
+itertools = "0.10"
+
+[lib]
+path = "src/lib.rs"
+name = "libanim"
+
+[profile.release]
+lto = true
